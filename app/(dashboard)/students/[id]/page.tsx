@@ -5,7 +5,7 @@ import {
   ArrowLeft, Star, Heart, Award, Loader2, Brain, Languages, 
   Music, Sparkles, Flag, Zap, Copy, Check, Save, Calendar, 
   User, Users, ClipboardCheck, CheckCircle2, AlertCircle, XCircle, Info,
-  Pencil, Trash2, Activity
+  Pencil, Trash2, Activity, X
 } from 'lucide-react';
 import Link from 'next/link';
 import { useParams, useRouter } from 'next/navigation';
@@ -97,7 +97,6 @@ export default function StudentDetailPage() {
     fetchAllData();
   }, [id]);
 
-  // FUNGSI HAPUS DENGAN SWEETALERT2
   const handleDeleteObservation = async (obsId: string) => {
     Swal.fire({
       title: 'Hapus Catatan?',
@@ -122,7 +121,6 @@ export default function StudentDetailPage() {
     });
   };
 
-  // FUNGSI UPDATE DENGAN SWEETALERT2
   const handleUpdateObservation = async (obsId: string) => {
     const { error } = await supabase.from('observations').update({ note: editValue }).eq('id', obsId);
     if (!error) {
@@ -224,7 +222,7 @@ export default function StudentDetailPage() {
 
       <div className="p-6 space-y-6">
         
-        {/* 2. Statistik Absensi Ramping */}
+        {/* 2. Statistik Absensi */}
         <div className="bg-white p-5 rounded-[32px] border border-slate-100 shadow-sm flex items-center justify-between">
           <div className="flex flex-col items-center flex-1">
             <span className="text-[16px] font-black text-emerald-500">{attendance.hadir}</span>
@@ -247,7 +245,7 @@ export default function StudentDetailPage() {
           </div>
         </div>
 
-        {/* 3. Tombol Generate AI - Desain Premium */}
+        {/* 3. Tombol Generate AI */}
         <button 
           onClick={generateAiRapor}
           disabled={isGenerating}
@@ -281,7 +279,7 @@ export default function StudentDetailPage() {
           </div>
         </div>
 
-        {/* 5. Hasil Narasi AI - Dark Mode Card */}
+        {/* 5. Hasil Narasi AI */}
         <div className="bg-slate-900 p-6 rounded-[40px] shadow-2xl relative overflow-hidden group">
             <div className="flex justify-between items-center mb-4">
                 <div className="flex items-center gap-2">
@@ -334,11 +332,17 @@ export default function StudentDetailPage() {
                             </p>
                           </div>
                           
-                          <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                             <button onClick={() => { setEditingId(obs.id); setEditValue(obs.note); }} className="p-2 text-slate-300 hover:text-amber-500 hover:bg-amber-50 rounded-xl transition-all">
+                          <div className="flex gap-1">
+                             <button 
+                               onClick={() => { setEditingId(obs.id); setEditValue(obs.note); }} 
+                               className="p-2 text-amber-600 bg-amber-50 hover:bg-amber-100 rounded-xl transition-all"
+                             >
                                 <Pencil size={14} />
                              </button>
-                             <button onClick={() => handleDeleteObservation(obs.id)} className="p-2 text-slate-300 hover:text-rose-500 hover:bg-rose-50 rounded-xl transition-all">
+                             <button 
+                               onClick={() => handleDeleteObservation(obs.id)} 
+                               className="p-2 text-rose-600 bg-rose-50 hover:bg-rose-100 rounded-xl transition-all"
+                             >
                                 <Trash2 size={14} />
                              </button>
                           </div>

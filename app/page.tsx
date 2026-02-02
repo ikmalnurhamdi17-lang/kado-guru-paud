@@ -146,7 +146,7 @@ export default function MobileDashboard() {
               </p>
               <div className="inline-flex items-center gap-1.5 bg-rose-500/30 px-2 py-0.5 rounded-md border border-rose-400/20">
                 <Heart size={10} className="text-rose-200 fill-rose-200" />
-                <span className="text-[9px] text-white font-black uppercase">Guru Berhati Mulia</span>
+                <span className="text-[9px] text-white font-black uppercase">Mendidik Dengan Hati</span>
               </div>
             </div>
           </div>
@@ -248,8 +248,7 @@ export default function MobileDashboard() {
 
       <div className="mt-12 text-center px-10 pb-10 opacity-60">
         <p className="text-slate-300 text-[10px] font-black uppercase tracking-widest leading-relaxed italic">
-          "Setiap anak adalah bintang yang bersinar." <br/>
-          — Shifa Zakiah Darajat
+          "Setiap anak adalah bintang yang bersinar."
         </p>
       </div>
     </div>

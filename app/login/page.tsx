@@ -74,7 +74,7 @@ export default function LoginPage() {
               </div>
             </div>
             <h1 className="text-2xl font-black text-slate-900 tracking-tight leading-none">Ruang Shifa</h1>
-            <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.4em] mt-2">Asisten Digital Guru PAUD</p>
+            <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.4em] mt-2"></p>
           </div>
         </div>
 
