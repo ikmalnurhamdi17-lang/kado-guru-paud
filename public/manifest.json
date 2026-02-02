@@ -1,0 +1,20 @@
+{
+  "name": "Ruang Shifa",
+  "short_name": "Ruang Shifa",
+  "icons": [
+    {
+      "src": "/paud.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/paud.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDFCFD",
+  "theme_color": "#4F46E5"
+}

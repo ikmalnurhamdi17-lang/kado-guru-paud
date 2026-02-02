@@ -1,0 +1,24 @@
+{
+  "name": "Ruang Shifa - Asisten Digital Guru",
+  "short_name": "Ruang Shifa",
+  "description": "Asisten pribadi Ibu Shifa untuk mencatat perkembangan dan absensi murid.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDFCFD",
+  "theme_color": "#4F46E5",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/app-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/app-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,26 +1,49 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* Mendaftarkan font agar bisa digunakan sebagai class 'font-sans' atau 'font-mono' */
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
 
-@theme inline {
+  /* Menambahkan variabel warna khusus agar class seperti 'bg-background' bekerja */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  
+  /* Tambahan radius khusus untuk gaya mobile yang lebih melengkung/smooth */
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-3xl: 2.5rem;
 }
 
+/* Memastikan Tailwind memantau seluruh file di folder app dan components */
+@source "../app/**/*.{ts,tsx}";
+@source "../components/**/*.{ts,tsx}";
+
+:root {
+  --background: #f8fafc; /* Slate 50: Memberikan kesan bersih dan profesional */
+  --foreground: #0f172a; /* Slate 900: Kontras yang baik untuk teks */
+}
+
+/* Untuk mode gelap (Optional, agar mata tidak lelah saat malam) */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0f172a;
+    --foreground: #f8fafc;
   }
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* Mencegah bouncing effect yang aneh di browser mobile */
+  overflow-x: hidden; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility tambahan untuk aplikasi mobile agar tidak ada highlight biru saat elemen ditekan */
+* {
+  -webkit-tap-highlight-color: transparent;
 }
