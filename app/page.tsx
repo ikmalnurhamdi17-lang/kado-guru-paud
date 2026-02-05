@@ -168,7 +168,7 @@ export default function MobileDashboard() {
           </div>
         </div>
 
-        <div className="bg-white p-5 rounded-[32px] shadow-xl shadow-slate-200/50 border border-white flex flex-col gap-3 active:scale-95 transition-transform">
+        <div className="bg-white p-5 rounded-[32px] shadow-xl shadow-slate-200/50 border border-white flex flex-col gap-3 relative overflow-hidden active:scale-95 transition-transform">
           <div className="bg-rose-50 w-10 h-10 rounded-xl flex items-center justify-center text-rose-500">
             <Heart size={20} fill="currentColor" />
           </div>
